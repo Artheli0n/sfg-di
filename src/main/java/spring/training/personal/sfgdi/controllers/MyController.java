@@ -1,6 +1,6 @@
 package spring.training.personal.sfgdi.controllers;
 
-import spring.training.personal.sfgdi.services.GreetingService;
+import spring.training.services.GreetingService;
 import org.springframework.stereotype.Controller;
 
 @Controller

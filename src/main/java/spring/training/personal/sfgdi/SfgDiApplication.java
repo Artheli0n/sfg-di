@@ -9,8 +9,12 @@ import spring.training.personal.sfgdi.controllers.SetterInjectedController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+// when doing component scan on a package, it does scan a whole package tree, not just on the package but on its sub-packages inside too
+// note that adding the component scan overwrites the default behavior of Spring Boot so need to add all packages
+@ComponentScan(basePackages = {"spring.training.services", "spring.training.personal"})
 public class SfgDiApplication {
 
     public static void main(String[] args) {

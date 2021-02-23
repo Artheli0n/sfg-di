@@ -1,6 +1,6 @@
 package spring.training.personal.sfgdi.controllers;
 
-import spring.training.personal.sfgdi.services.ConstructorGreetingService;
+import spring.training.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

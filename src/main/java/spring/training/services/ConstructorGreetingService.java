@@ -1,4 +1,4 @@
-package spring.training.personal.sfgdi.services;
+package spring.training.services;
 
 import org.springframework.stereotype.Service;
 

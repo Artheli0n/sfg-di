@@ -1,4 +1,4 @@
-package spring.training.personal.sfgdi.services;
+package spring.training.services;
 
 /**
  * Created by jt on 12/28/19.
