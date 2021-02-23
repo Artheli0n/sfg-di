@@ -10,7 +10,8 @@ public class ContructorInjectedController {
     private final GreetingService greetingService;
 
     // in case of contructor injection, there is no need to add the "autowired" annotation since Spring 4.2
-    public ContructorInjectedController(@Qualifier("constructorGreetingService") final GreetingService greetingService) {
+    public ContructorInjectedController(
+            @Qualifier("constructorGreetingService") final GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 

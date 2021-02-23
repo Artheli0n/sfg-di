@@ -3,6 +3,7 @@ package spring.training.personal.sfgdi;
 import spring.training.personal.sfgdi.controllers.ContructorInjectedController;
 import spring.training.personal.sfgdi.controllers.I18nController;
 import spring.training.personal.sfgdi.controllers.MyController;
+import spring.training.personal.sfgdi.controllers.PetController;
 import spring.training.personal.sfgdi.controllers.PropertyInjectedController;
 import spring.training.personal.sfgdi.controllers.SetterInjectedController;
 import org.springframework.boot.SpringApplication;
@@ -15,6 +16,11 @@ public class SfgDiApplication {
     public static void main(String[] args) {
         // SpringApplication.run(SfgDiApplication.class, args); builds then returns the Spring Application Context
         ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
+
+        PetController petController = ctx.getBean("petController", PetController.class);
+
+        System.out.println("--- The Best Pet is ---");
+        System.out.println(petController.whichPetIsTheBest());
 
         I18nController i18nController = (I18nController) ctx.getBean("i18nController");
         System.out.println(i18nController.sayHello());
@@ -29,19 +35,22 @@ public class SfgDiApplication {
 
         System.out.println(" -------------- Property");
 
-        PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
+        PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx
+                .getBean("propertyInjectedController");
 
         System.out.println(propertyInjectedController.getGreeting());
 
         System.out.println(" -------------- Setter");
 
-        SetterInjectedController setterInjectedController = (SetterInjectedController) ctx.getBean("setterInjectedController");
+        SetterInjectedController setterInjectedController = (SetterInjectedController) ctx
+                .getBean("setterInjectedController");
 
         System.out.println(setterInjectedController.getGreeting());
 
         System.out.println(" -------------- Constructor");
 
-        ContructorInjectedController contructorInjectedController = (ContructorInjectedController) ctx.getBean("contructorInjectedController");
+        ContructorInjectedController contructorInjectedController = (ContructorInjectedController) ctx
+                .getBean("contructorInjectedController");
 
         System.out.println(contructorInjectedController.getGreeting());
     }
