@@ -7,15 +7,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class PropertyInjectedControllerTest {
+class ConstructorInjectedControllerTest {
 
-    PropertyInjectedController controller;
+    ConstructorInjectedController controller;
 
     @BeforeEach
     void setUp() {
-        controller = new PropertyInjectedController();
-
-        controller.greetingService = new ConstructorGreetingService();
+        controller = new ConstructorInjectedController(new ConstructorGreetingService());
     }
 
     @Test

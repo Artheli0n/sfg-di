@@ -12,7 +12,7 @@ public class PropertyInjectedController {
     @Qualifier("propertyInjectedGreetingService")
     public GreetingService greetingService;
 
-    public String getGreeting() {
+    public String sayHello() {
         return greetingService.sayGreeting();
     }
 }
