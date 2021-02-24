@@ -1,0 +1,38 @@
+# this is a comment
+# YAML is used to describe data structures
+
+name: John
+
+names: # Comment
+  - John
+  - Paul
+  - Ringo
+
+# following is a value, not a comment (can try writing after to see)
+pound_sign: "#"
+
+book:
+  author: Joe Buck
+  publisher: Random house
+
+truth: yes
+
+another_truth: True
+
+more_true: true
+
+false: no # No, false, FALSE
+
+string_val: "This is it's quote"
+
+colon_string: "my courses: one two three"
+
+include_new_lines: |
+  asd khqzkdh qdqldjq
+  qozdjqljqdlj lqjdjqz jqzd
+  qlzdk qzdk qld k
+
+ignore_new_lines: >
+  this is
+  just one long
+  string

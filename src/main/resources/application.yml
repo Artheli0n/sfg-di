@@ -1,0 +1,20 @@
+# Spring automatically checks for application.yml files also
+
+## JMS properties
+guru:
+  jms:
+    username: JMS Username
+    password: somepass
+    url: SomeURL
+
+---
+# The triple dash creates a new document in YAML so this document is actually two in one
+
+spring:
+  config:
+    activate:
+      on-profile: de
+
+guru:
+  jms:
+    username: JMS Username in German
